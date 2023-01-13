@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morse Code Translator</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </head>
+
 <body>
     <div class="head">
         <div class="head-details">
+            <div class="head-details-logo">
+                <h3 class="head-details-logo-text">Morse Code Translator</h3>
+
+            </div>
             <div class="head-details-contacts">
                 <div class="head-details-contacts-github">
+                    <a href="https://github.com/jackythesmurf"><img width="40" src="images/github-svgrepo-com.svg" alt="">
+                    </a>
 
                 </div>
                 <div class="head-details-contacts-linkedin">
+                    <a href="https://www.linkedin.com/in/jacky-li-2277a8259/"><img width="40" src="images/linkedin-svgrepo-com.svg" alt="">
+                    </a>
+
 
                 </div>
                 <div class="head-details-contacts-email">
-
+                    <img width="40" src="images/mail-5-svgrepo-com.svg" alt=""> 
+                    <p>jackythesmurf@gmail.com</p>
                 </div>
             </div>
-            <div class="head-details-logo">
 
-            </div>
         </div>
     </div>
     <div class="intro">
@@ -32,7 +42,7 @@
 
         </div>
         <div class="intro-description">
-            
+
         </div>
 
     </div>
@@ -48,28 +58,18 @@
         </div>
         <div class="content-right">
             <div class="content-right-header">
-                <textarea
-                    class="content-right-header-english"
-                    
-                    type="text"
-                    rows="5"
-                    cols="50"
-                    placeholder="Enter English Text here"
-                ></textarea>
+                <textarea class="content-right-header-english" id="english-input" type="text" rows="5" cols="50"
+                    placeholder="Enter English Text here"></textarea>
             </div>
             <div class="content-right-textbox">
-                <textarea
-                    class="content-right-header-morsecode"
-                    type="text"
-                    rows="5"
-                    cols="50"
-                    placeholder="Morse Code will appear hear"
-                ></textarea>
+                <textarea class="content-right-header-morsecode" id="morsecode-output" type="text" rows="5" cols="50"
+                    placeholder="Morse Code will appear hear"></textarea>
             </div>
 
         </div>
 
     </div>
-    
+
 </body>
+
 </html>

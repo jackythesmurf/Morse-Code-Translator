@@ -1,3 +1,26 @@
+.head {
+  min-height: 70px;
+  background: rgb(184, 208, 254);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.head-details-logo {
+  font-size: 1.4em;
+  text-align: center;
+}
+.head-details-contacts {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  column-gap: 10px;
+}
+.head-details-contacts-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,4 +28,6 @@
 
 textarea[type=text] {
   resize: none;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
