@@ -1,0 +1,77 @@
+@mixin headingStyles{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.computer {
+  display: grid;
+  &-screen {
+    position: absolute;
+    place-self: center;
+    margin: 80px;
+    min-width: 90%;
+
+    min-height: 63vh;
+    max-height: 63vh;
+    transition: all 0.2s;
+    @media (max-width: 500px) {
+      min-width: 60%;
+    }
+    @media (min-width: 500px) and (max-width: 800px) {
+      min-width: 77%;
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+      min-width: 76%;
+    }
+    @media (min-width: 851px) and (max-width: 1200px) {
+      min-width: 83%;
+    }
+
+    border-radius: 50px;
+    background: url("https://i.postimg.cc/tJhBVh4d/scanlines.png"),
+      linear-gradient(45deg, #000000, #08658d);
+    border-width: thick;
+    border-color: #5f5e5e;
+    border-style: inset;
+    &-intro {
+      &-text {
+        margin-top: 20px;
+
+        font-size: 2.5em;
+        @media (max-width: 900px) {
+          font-size: 1.5em;
+        }
+        @media (max-height: 800px) {
+            font-size: 1.5em;
+         }
+      }
+      &-totranslate {
+        font-size: 1em;
+        @media (max-width: 900px) {
+          font-size: 0.7em;
+        }
+        @media (max-height: 800px) {
+            font-size: 0.8em;
+         }
+      }
+      text-align: center;
+    }
+    &-input{
+        &-header{
+            @include headingStyles()
+        }
+    }
+    &-output{
+        &-header{
+            @include headingStyles()
+        }
+            
+        
+    }
+  }
+}
+
+.displayed-text{
+    margin-left: 5%;
+}

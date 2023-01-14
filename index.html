@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morse Code Translator</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+    />
     <script type="module" src="scripts/script.js"></script>
-</head>
-
-<body>
-    <div class="head">
-        <div class="head-details">
-            <div class="head-details-logo">
-                <h3 class="head-details-logo-text">Morse Code Translator</h3>
-
-            </div>
-            <div class="head-details-contacts">
-                <div class="head-details-contacts-github">
-                    <a href="https://github.com/jackythesmurf"><img width="40" src="images/github-svgrepo-com.svg" alt="">
-                    </a>
-
-                </div>
-                <div class="head-details-contacts-linkedin">
-                    <a href="https://www.linkedin.com/in/jacky-li-2277a8259/"><img width="40" src="images/linkedin-svgrepo-com.svg" alt="">
-                    </a>
-
-
-                </div>
-                <div class="head-details-contacts-email">
-                    <img width="40" src="images/mail-5-svgrepo-com.svg" alt=""> 
-                    <p>jackythesmurf@gmail.com</p>
-                </div>
-            </div>
-
+  </head>
+  <body>
+    <div class="computer">
+      <div class="computer-edge">
+        <div clas="computer-edge-bazel"></div>
+      </div>
+      <div class="computer-screen">
+        <div class="computer-screen-intro">
+          <p class="computer-screen-intro-text">
+            Weclome to the Morse Code Translator <br />
+          </p>
+          <p class="computer-screen-intro-totranslate">
+            Type English below, then hit translate.
+          </p>
+          <p class="computer-screen-intro-totranslate">
+            Live audio translation avaliable (sound up)
+          </p>
         </div>
+        <div class="displayed-text">
+          <div class="computer-screen-input">
+            <div class="computer-screen-input-header">
+              <p class="computer-screen-input-header-text">
+                Type English Here =>
+              </p>
+            </div>
+            <textarea
+              autofocus
+              name=""
+              id="input"
+              cols="25"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="computer-screen-output">
+            <div class="computer-screen-output-header">
+              <p class="computer-screen-output-header-text">
+                Translated Morse Code =>
+              </p>
+            </div>
+            <textarea
+              autofocus
+              name=""
+              id="output"
+              cols="25"
+              rows="5"
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="computer-buttons">
+        <div id="translate-button" class="computer-buttons-translate">
+          <button>Translate</button>
+        </div>
+
+        <div id="playbutton" class="computer-buttons-playsound">
+          <button>Play sound again</button>
+        </div>
+      </div>
     </div>
-    <div class="intro">
-        <div class="intro-name">
-
-        </div>
-        <div class="intro-description">
-
-        </div>
-
-    </div>
-    <div class="content">
-        <div class="content-left">
-            <div class="content-left-header">
-                <span></span>
-            </div>
-            <div class="content-left-textbox">
-
-            </div>
-
-        </div>
-        <div class="content-right">
-            <div class="content-right-header">
-                <textarea class="content-right-header-english" id="english-input" type="text" rows="5" cols="50"
-                    placeholder="Enter English Text here"></textarea>
-            </div>
-            <div class="content-right-textbox">
-                <textarea class="content-right-header-morsecode" id="morsecode-output" type="text" rows="5" cols="50"
-                    placeholder="Morse Code will appear hear"></textarea>
-            </div>
-
-        </div>
-
-    </div>
-
-</body>
-
+  </body>
 </html>

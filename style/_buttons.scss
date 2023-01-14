@@ -1,0 +1,10 @@
+.computer{
+    &-buttons{
+        display: flex;
+        column-gap: 10px;
+        position: absolute;
+        bottom: 15%;
+        place-self: center;
+        
+    }
+}

@@ -1,0 +1,39 @@
+@import "_animation";
+
+textarea{
+    color:rgba(22, 240, 22, 0.9);
+    animation: flicker 10s infinite;
+    
+    background-color: transparent;
+    letter-spacing: 1px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-style:none;
+    resize: none;
+    min-width: 300px;
+    font-size: 1em;
+    @media (max-width: 800px) {
+        min-width: 180px;
+        max-width: 180px;
+        
+    }
+    @media (min-width: 801px) {
+        min-width: 400px;
+        max-width: 400px;
+        
+    }
+    @media (max-height: 800px) {
+       font-size: 0.8em;
+    }
+   
+}
+textarea:focus{
+    outline:none;
+}
+
+p{
+    color:rgba(22, 240, 22, 0.9);
+    animation: flicker 10s infinite;
+    letter-spacing: 1px;
+}
