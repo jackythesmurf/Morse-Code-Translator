@@ -519,6 +519,34 @@
   bottom: 15%;
   place-self: center;
 }
+.computer-buttons-translate {
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  background: #eee8ce;
+  margin-left: 20px;
+  box-shadow: 2px 2px 4px #7c7a6b, -2px -2px 4px #dbdbdb;
+}
+.computer-buttons-playsound {
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  background: #eee8ce;
+  margin-left: 20px;
+  box-shadow: 2px 2px 4px #7c7a6b, -2px -2px 4px #dbdbdb;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 
 @keyframes cursor {
   0% {

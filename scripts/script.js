@@ -6,7 +6,6 @@ let AudioContext = window.AudioContext;
 let ctx = new AudioContext();
 
 const playMorseLive = (letter, live) => {
- 
   var dot = 1.2 / 15;
   var t = ctx.currentTime;
 
@@ -60,11 +59,14 @@ const playMorseLive = (letter, live) => {
 };
 
 const translate = (englishInput) => {
+  if (englishInput === "") {
+    return "Don't leave above input blank";
+  }
   let translation = "";
   for (let char of englishInput) {
-    let morseCode = morseCodeDictionary[char];
+    let morseCode = morseCodeDictionary[char.toUpperCase()];
     if (morseCode == undefined) {
-      morseCode = "";
+      return "English and numeric characters only !";
     } else {
       translation += morseCode + " ";
     }
