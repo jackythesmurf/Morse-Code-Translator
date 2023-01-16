@@ -2,15 +2,14 @@
 Terminal themed morse code translator, with live audio transcription
 
 ## Introduction
-Create a user interface that allows the user to either input some English and translate it into Morse Code.
+This project is a user interface that allows the user to input some English text and translates it into Morse Code with live audio transcription.
 
-
+<img width="500" src="Screen Shot 2023-01-16 at 11.59.02 pm.png">
 
 ## MVP
-Create JS functions that would allow the user to:
+Use JavaScript that would allow the users to:
 
-translate their English text into Morse Code
-Morse Code into English text
-Make sure to handle spaces properly (ie. there is 1 space between English words, but one space between Morse Code characters)
-
-Must have at least two test suites i.e (two describe blocks) - be mindful we haven't covered DOM testing see Alex if you really want to do that
+* Accept input from a user on the web
+* Translate input from the user into Morse Code
+* write Jest test to ensure functionality and error handling 
+* Utilise knowledge of Function, Objects, and Modules to translate Morse Code
