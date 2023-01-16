@@ -3,6 +3,7 @@ Terminal themed morse code translator, with live audio transcription
 
 ## Introduction
 This project creates a user interface for user to input some English text and translates it into Morse Code with live audio transcription.
+<strong> View live project at: https://jackythesmurf.github.io/Morse-Code-Translator/</strong>
 
 <img width="500" src="Screen Shot 2023-01-16 at 11.59.02 pm.png">
 
