@@ -7,7 +7,7 @@ This project is a user interface that allows the user to input some English text
 <img width="500" src="Screen Shot 2023-01-16 at 11.59.02 pm.png">
 
 ## MVP
-Use JavaScript that would allow the users to:
+Use HTML and CSS to create a user interface and then use JavaScript to allow users to:
 
 * Accept input from a user on the web
 * Translate input from the user into Morse Code
