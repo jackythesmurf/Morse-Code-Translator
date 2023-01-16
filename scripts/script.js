@@ -2,10 +2,11 @@ import { morseCodeDictionary } from "./dictionary.js";
 
 // Initial Start Up Code
 let pressOnce = true;
+let AudioContext = window.AudioContext;
+let ctx = new AudioContext();
 
 const playMorseLive = (letter, live) => {
-  var AudioContext = window.AudioContext;
-  var ctx = new AudioContext();
+ 
   var dot = 1.2 / 15;
   var t = ctx.currentTime;
 
@@ -41,16 +42,20 @@ const playMorseLive = (letter, live) => {
     letter.split("").forEach((char) => {
       setValuePerChar(char);
     });
-    let i = 0
-    setInterval(() => {
-      i++
-      if( i == letter.length) {
-        pressOnce = true
-      }
-    }, 200);
+    let i = 0;
+    const setDuration = () => {
+      setInterval(() => {
+        i++;
+        if (i == letter.length) {
+          pressOnce = true;
+          clearInterval(setDuration);
+        }
+      }, 200);
+    };
   }
   oscillator.connect(gainNode);
   gainNode.connect(ctx.destination);
+  console.log(letter);
   oscillator.start();
 };
 
