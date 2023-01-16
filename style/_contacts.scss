@@ -1,0 +1,27 @@
+.computer-bottom{
+    &-contacts{
+       
+        position:absolute;
+        right: 20px;
+        bottom: 0px;
+        
+        &-title{
+            text-align: center;
+
+        }
+        &-list{
+            
+            &-container{
+                display: flex;
+                list-style: none;
+                column-gap: 10px;
+                &-items{
+                    align-items: center;
+                    
+
+                }
+            }
+
+        }
+    }
+}

@@ -775,6 +775,24 @@ p {
   letter-spacing: 1px;
 }
 
+.computer-bottom-contacts {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+.computer-bottom-contacts-title {
+  text-align: center;
+}
+.computer-bottom-contacts-list-container {
+  display: flex;
+  list-style: none;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.computer-bottom-contacts-list-container-items {
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
