@@ -11,5 +11,5 @@ Use HTML and CSS to create a user interface and then use JavaScript to allow use
 
 * Accept input from a user on the web
 * Translate input from the user into Morse Code
-* write Jest test to ensure functionality and error handling 
+* Use Jest test to ensure functionality and error handling 
 * Utilise knowledge of Function, Objects, and Modules to translate Morse Code
