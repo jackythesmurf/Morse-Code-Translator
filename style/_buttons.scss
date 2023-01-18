@@ -20,6 +20,8 @@
     }
     &-playsound {
       @include buttonstyle();
+    }&-switch{
+      @include buttonstyle();
     }
   }
 }

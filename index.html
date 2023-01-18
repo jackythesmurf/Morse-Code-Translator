@@ -33,7 +33,7 @@
         <div class="displayed-text">
           <div class="computer-screen-input">
             <div class="computer-screen-input-header">
-              <p class="computer-screen-input-header-text">
+              <p id="original-language" class="computer-screen-input-header-text">
                 Type English Here =>
               </p>
             </div>
@@ -47,7 +47,7 @@
           </div>
           <div class="computer-screen-output">
             <div class="computer-screen-output-header">
-              <p class="computer-screen-output-header-text">
+              <p id="translated-language" class="computer-screen-output-header-text">
                 Translated Morse Code =>
               </p>
             </div>
@@ -70,11 +70,13 @@
         <div id="playbutton" class="computer-buttons-playsound">
           <button>Play sound again</button>
         </div>
+        <div id="switchbutton" class="computer-buttons-switch">
+          <button>Switch Translations</button>
+        </div>
       </div>
       <div class="computer-bottom">
         <div class="computer-bottom-contacts">
           <div class="computer-bottom-contacts-title">
-            <h4>Contacts</h4>
           </div>
           <div class="computer-bottom-contacts-list">
             <ul class="computer-bottom-contacts-list-container">
@@ -88,6 +90,10 @@
 
         </div>
 
+      </div>
+      <div class="speakers">
+        <img class="speakers-left" width="200" src="icons/pngwing.com.png" alt="">  
+        <img class="speakers-right" width="200" src="icons/pngwing.com.png" alt="">  
       </div>
     </div>
   </body>

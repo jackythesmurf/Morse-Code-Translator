@@ -1,27 +1,23 @@
-.computer-bottom{
-    &-contacts{
-       
-        position:absolute;
-        right: 20px;
-        bottom: 0px;
-        
-        &-title{
-            text-align: center;
+.computer-bottom {
+  &-contacts {
+    position: absolute;
+    top: 7px;
 
-        }
-        &-list{
-            
-            &-container{
-                display: flex;
-                list-style: none;
-                column-gap: 10px;
-                &-items{
-                    align-items: center;
-                    
+    right: 10px;
 
-                }
-            }
 
-        }
+    &-title {
+      text-align: center;
     }
+    &-list {
+      &-container {
+        display: flex;
+        list-style: none;
+        column-gap: 10px;
+        &-items {
+          align-items: center;
+        }
+      }
+    }
+  }
 }
