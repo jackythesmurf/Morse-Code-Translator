@@ -1,4 +1,4 @@
-export const morseCodeDictionary = {
+ export const morseCodeDictionary = {
     'A': '.-', 'B': '-...',
     'C': '-.-.', 'D': '-..', 'E': '.',
     'F': '..-.', 'G': '--.', 'H': '....',
@@ -15,3 +15,8 @@ export const morseCodeDictionary = {
     '?': '..--..', '/': '-..-.', '-': '-....-',
     '(': '-.--.', ')': '-.--.-', ' ': '/'
 };
+
+
+
+export const englishDictionary = Object.fromEntries(Object.entries(morseCodeDictionary).map(item=> [item[1], item[0]]))
+
