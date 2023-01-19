@@ -9,10 +9,11 @@ let AUDIOCONTEXT = window.AudioContext;
 let CTX = new AUDIOCONTEXT();
 
 const main = () => {
-  const englishTextBox = document.querySelector("#input");
+  const inputTextBox = document.querySelector("#input");
   const translateButton = document.querySelector("#translate-button");
   const playSound = document.querySelector("#playbutton");
   const switchTranslation = document.querySelector("#switchbutton");
+
 
   let languageToTranslate = "english";
 
@@ -31,14 +32,18 @@ const main = () => {
   })
 
   translateButton.addEventListener("click", () => {
+    let input = inputTextBox.value.toUpperCase();
     if (languageToTranslate === "english") {
-      let input = englishTextBox.value.toUpperCase();
+      
       if (PRESS_ONCE[0]) {
         showOutput(input, "english", PRESS_ONCE, CTX);
         PRESS_ONCE[0] = false;
       }
     } else if (languageToTranslate==="morse") {
-      englishPlayLive("hi there", true)
+
+      if (PRESS_ONCE[0]) {
+        showOutput(input, "morse", PRESS_ONCE, CTX);
+      }
 
     }
   });
@@ -50,6 +55,7 @@ const main = () => {
         PRESS_ONCE[0] = false;
       }
     } else if (languageToTranslate==="morse") {
+      englishPlayLive("hi there", false)
 
     }
   });

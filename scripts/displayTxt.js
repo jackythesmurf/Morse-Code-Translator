@@ -2,6 +2,7 @@ import { translate } from "./translate.js";
 import { morseCodeDictionary } from "./dictionary.js";
 import { englishDictionary } from "./dictionary.js";
 import { playMorseLive } from "./audioMorse.js";
+import { englishPlayLive } from "./audioEnglish.js";
 
 export const showOutput = (inputStr, languageToTranslate, PRESS_ONCE, CTX) => {
   const outputTextBox = document.querySelector("#output");
@@ -20,5 +21,20 @@ export const showOutput = (inputStr, languageToTranslate, PRESS_ONCE, CTX) => {
       }
     }, 200);
     return translatedTxt;
+  }
+  if (languageToTranslate === "morse"){
+    let i =0
+    
+    let translatedTxt = translate(inputStr, "", " ", englishDictionary)
+    englishPlayLive(translatedTxt)
+    const textType = setInterval(() => {
+      outputTextBox.innerHTML += translatedTxt[i]
+      i++
+      if (translatedTxt.length === i) {
+        clearInterval(textType)
+      }
+    }, 50)
+    return translatedTxt
+    
   }
 };
