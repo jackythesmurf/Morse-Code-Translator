@@ -11,6 +11,6 @@ This project creates a user interface for user to input some English text and tr
 Use HTML and CSS to create a user interface and then use JavaScript to allow users to:
 
 * Accept input from a user on the web
-* Translate input from the user into Morse Code
+* Translate english input from the user into Morse Code and vice versa
 * Use Jest test to ensure functionality and error handling 
 * Utilise knowledge of Function, Objects, and Modules to translate Morse Code
