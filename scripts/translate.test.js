@@ -32,6 +32,19 @@ describe('translate Morse to english', () => {
     it("Should return correct english for morse code for sentences", () => {
         expect(translate(".... . .-.. .-.. --- / - .... . .-. .", "", " ", englishDictionary)).toBe("HELLO THERE")
     })
+})
 
-
-});
+describe('error handling', () => {
+    it("Should throw error if input is blank", () => {
+        expect(() => translate("", "", "", englishDictionary)).toThrow("Don't leave above input blank")
+    })
+    it("Should throw error if input is not valid", () => {
+        expect(() => translate("!", "", "", englishDictionary)).toThrow('"!" is not a valid character')
+    })
+    it("Should throw error if input is not valid", () => {
+        expect(() => translate("HELLO THERE!", "", "", morseCodeDictionary)).toThrow('"!" is not a valid character')
+    })
+    it("Should throw error if input is blank", () => {
+        expect(() => translate("", "", "", morseCodeDictionary)).toThrow(("Don't leave above input blank"))
+    })
+})
