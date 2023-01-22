@@ -25,5 +25,13 @@ describe('translate special character test', () => {
 
 describe('translate Morse to english', () => {
 
+    it("Should return correct english for morse code", () => {
+        expect(translate(".... . .-.. .-.. ---", "", " ", englishDictionary)).toBe("HELLO")
+    }
+    )
+    it("Should return correct english for morse code for sentences", () => {
+        expect(translate(".... . .-.. .-.. --- / - .... . .-. .", "", " ", englishDictionary)).toBe("HELLO THERE")
+    })
+
 
 });
