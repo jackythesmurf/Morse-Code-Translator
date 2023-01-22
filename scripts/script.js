@@ -8,6 +8,9 @@ let PRESS_ONCE = [true];
 let AUDIOCONTEXT = window.AudioContext;
 let CTX = new AUDIOCONTEXT();
 
+
+
+
 const main = () => {
   const inputTextBox = document.querySelector("#input");
   const translateButton = document.querySelector("#translate-button");
@@ -20,6 +23,12 @@ const main = () => {
   switchTranslation.addEventListener("click", () => {
     let inputLanguage = document.querySelector("#original-language")
     let outputLanguage = document.querySelector("#translated-language")
+    const outputTextBox = document.querySelector("#output");
+    outputTextBox.value = "";
+    const inputTextBox = document.querySelector("#input");
+    inputTextBox.value = "";
+    
+    outputLanguage.innerHTML = ""
     if (languageToTranslate==="english"){
       languageToTranslate = "morse"
       inputLanguage.innerHTML = "Type Morse Code Here =>"
@@ -33,29 +42,37 @@ const main = () => {
 
   translateButton.addEventListener("click", () => {
     let input = inputTextBox.value.toUpperCase();
-    if (languageToTranslate === "english") {
+    try {
+
+      if (languageToTranslate === "english") {
+        if (PRESS_ONCE[0]) {
+          console.log("Runned");
+          showOutput(input, "english", PRESS_ONCE, CTX);
+          PRESS_ONCE[0] = false;
+        }
+      } else if (languageToTranslate==="morse") {
+        if (PRESS_ONCE[0]) {
+          
+          showOutput(input, "morse", PRESS_ONCE, CTX);
+        }
+      }
+    }
+    catch (error) {
+      const outputTextBox = document.querySelector("#output");
+      outputTextBox.value = error;
       
-      if (PRESS_ONCE[0]) {
-        showOutput(input, "english", PRESS_ONCE, CTX);
-        PRESS_ONCE[0] = false;
-      }
-    } else if (languageToTranslate==="morse") {
-
-      if (PRESS_ONCE[0]) {
-        showOutput(input, "morse", PRESS_ONCE, CTX);
-      }
-
     }
   });
   playSound.addEventListener("click", () => {
-    let output = document.querySelector("#output").innerHTML;
+    let output = document.querySelector("#output").value;
     if (languageToTranslate === "english") {
       if (PRESS_ONCE[0]) {
         playMorseLive(output, false, PRESS_ONCE, CTX);
         PRESS_ONCE[0] = false;
       }
     } else if (languageToTranslate==="morse") {
-      englishPlayLive("hi there", false)
+      
+      englishPlayLive(output, false)
 
     }
   });

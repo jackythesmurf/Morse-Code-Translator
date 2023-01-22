@@ -6,13 +6,14 @@ import { englishPlayLive } from "./audioEnglish.js";
 
 export const showOutput = (inputStr, languageToTranslate, PRESS_ONCE, CTX) => {
   const outputTextBox = document.querySelector("#output");
-  outputTextBox.innerHTML = "";
+  outputTextBox.value = "";
   if (languageToTranslate === "english") {
     let translatedTxt = translate(inputStr, " ", "", morseCodeDictionary);
+    
+    console.log("showoutput is running")
     let i = 0;
-
     const textType = setInterval(() => {
-      outputTextBox.innerHTML += translatedTxt[i];
+      outputTextBox.value += translatedTxt[i];
       playMorseLive(translatedTxt[i], true, PRESS_ONCE, CTX);
       i++;
       if (translatedTxt.length === i) {
@@ -28,7 +29,7 @@ export const showOutput = (inputStr, languageToTranslate, PRESS_ONCE, CTX) => {
     let translatedTxt = translate(inputStr, "", " ", englishDictionary)
     englishPlayLive(translatedTxt)
     const textType = setInterval(() => {
-      outputTextBox.innerHTML += translatedTxt[i]
+      outputTextBox.value += translatedTxt[i]
       i++
       if (translatedTxt.length === i) {
         clearInterval(textType)
