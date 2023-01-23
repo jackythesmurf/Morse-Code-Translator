@@ -144,12 +144,6 @@
   border-color: #5f5e5e;
   border-style: inset;
 }
-@media (max-height: 900px) {
-  .computer-screen {
-    min-height: 80vh;
-    max-height: 80vh;
-  }
-}
 @media (max-width: 550px) {
   .computer-screen {
     max-width: 70%;
@@ -226,6 +220,12 @@
   border-radius: 50px;
   background: #EEE8CE;
   box-shadow: inset 12px 12px 24px #5f5d52, inset -12px -12px 24px #ffffff;
+}
+@media (max-height: 900px) {
+  .computer {
+    min-height: 90vh;
+    max-height: 90vh;
+  }
 }
 
 .computer-buttons {

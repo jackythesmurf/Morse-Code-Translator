@@ -19,11 +19,7 @@
    
     min-height: 63vh;
     max-height: 63vh;
-    @media (max-height: 900px) {
-      min-height: 80vh;
-      max-height: 80vh;
-      
-    }
+    
     transition: all 0.2s;
     @media (max-width: 550px) {
       // transform: translate(-5%, 5%);

@@ -10,5 +10,10 @@
     background: #EEE8CE;
     box-shadow: inset 12px 12px 24px #5f5d52,
                 inset -12px -12px 24px #ffffff;
+    @media (max-height: 900px) {
+        min-height: 90vh;
+        max-height: 90vh;
+        
+        }
     
 }
