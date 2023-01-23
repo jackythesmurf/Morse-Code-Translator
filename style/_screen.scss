@@ -5,27 +5,35 @@
 }
 
 .computer {
-  display: grid;
+  display: flex;
+ 
   &-screen {
     position: absolute;
-    place-self: center;
-    margin: 80px;
-    min-width: 90%;
+    // center the screen in the middle
 
+    
+    
+    transform: translate(5%, 5%);
+
+    min-width: 87%;
+   
     min-height: 63vh;
     max-height: 63vh;
     transition: all 0.2s;
-    @media (max-width: 500px) {
-      min-width: 60%;
+    @media (max-width: 550px) {
+      // transform: translate(-5%, 5%);
+      max-width: 70%;
+      min-width: 70%;
     }
-    @media (min-width: 500px) and (max-width: 800px) {
-      min-width: 77%;
+    @media (min-width: 550px) and (max-width: 800px) {
+      
+      min-width: 79%;
     }
     @media (min-width: 800px) and (max-width: 850px) {
-      min-width: 76%;
+      min-width: 80%;
     }
     @media (min-width: 851px) and (max-width: 1200px) {
-      min-width: 83%;
+      min-width: 84%;
     }
 
     border-radius: 50px;

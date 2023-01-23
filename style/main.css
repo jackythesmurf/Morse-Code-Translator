@@ -129,13 +129,12 @@
   }
 }
 .computer {
-  display: grid;
+  display: flex;
 }
 .computer-screen {
   position: absolute;
-  place-self: center;
-  margin: 80px;
-  min-width: 90%;
+  transform: translate(5%, 5%);
+  min-width: 87%;
   min-height: 63vh;
   max-height: 63vh;
   transition: all 0.2s;
@@ -145,24 +144,25 @@
   border-color: #5f5e5e;
   border-style: inset;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .computer-screen {
-    min-width: 60%;
+    max-width: 70%;
+    min-width: 70%;
   }
 }
-@media (min-width: 500px) and (max-width: 800px) {
+@media (min-width: 550px) and (max-width: 800px) {
   .computer-screen {
-    min-width: 77%;
+    min-width: 79%;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
   .computer-screen {
-    min-width: 76%;
+    min-width: 80%;
   }
 }
 @media (min-width: 851px) and (max-width: 1200px) {
   .computer-screen {
-    min-width: 83%;
+    min-width: 84%;
   }
 }
 .computer-screen-intro {
@@ -227,23 +227,30 @@
   -moz-column-gap: 10px;
        column-gap: 10px;
   position: absolute;
+  left: 50%;
+  transform: translate(-150px, 0);
   bottom: 15%;
-  place-self: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .computer-buttons {
+    transform: translate(-100px, 30px);
+  }
 }
 .computer-buttons-translate {
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   background: #eee8ce;
   box-shadow: 2px 2px 4px #7c7a6b, -2px -2px 4px #dbdbdb;
 }
 .computer-buttons-playsound {
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   background: #eee8ce;
   box-shadow: 2px 2px 4px #7c7a6b, -2px -2px 4px #dbdbdb;
 }
 .computer-buttons-switch {
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   background: #eee8ce;
   box-shadow: 2px 2px 4px #7c7a6b, -2px -2px 4px #dbdbdb;
@@ -330,7 +337,7 @@ textarea {
           animation: flicker 10s infinite;
   background-color: transparent;
   letter-spacing: 1px;
-  margin-left: 40px;
+  margin-left: 35px;
   margin-right: 20px;
   margin-bottom: 20px;
   border-style: none;
