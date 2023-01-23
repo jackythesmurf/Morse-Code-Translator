@@ -144,6 +144,12 @@
   border-color: #5f5e5e;
   border-style: inset;
 }
+@media (max-height: 900px) {
+  .computer-screen {
+    min-height: 80vh;
+    max-height: 80vh;
+  }
+}
 @media (max-width: 550px) {
   .computer-screen {
     max-width: 70%;
