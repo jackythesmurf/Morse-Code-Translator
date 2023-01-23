@@ -3,13 +3,24 @@
     &-right{
         max-width: 10%;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         right:15%;
-    }
+        @media (max-width: 800px) {
+            max-width: 16%;
+            
+        }
+            
+        }
     &-left{
         max-width: 10%;
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         left:15%;
-    }
+        @media (max-width: 800px) {
+            max-width: 16%;
+            
+        }
+            
+        }
+    
 }
